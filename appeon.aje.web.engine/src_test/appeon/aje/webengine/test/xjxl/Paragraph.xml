@@ -1,0 +1,140 @@
+<models xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="meta.xsd">
+	<model name="Section" dbName="T_dlzl">
+		<description>段落资料</description>
+		<fields>
+			<field name="code" dbName="zhbh" type="1" len="13">
+				<title>组合编号（前补3个0＋线路ID）</title>
+				<caption>组合编号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>true</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="id" dbName="dlbh" type="1" len="3">
+				<title>段落编号</title>
+				<caption>段落编号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="lineCode" dbName="xlid" type="1" len="10">
+				<title>线路（外键）</title>
+				<caption>线路</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="name" dbName="dlmc" type="1" len="40">
+				<title>段落名称</title>
+				<caption>段落名称</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="start" dbName="dlqd" type="1" len="20">
+				<title>段落起点</title>
+				<caption>段落起点</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="end" dbName="dlzd" type="1" len="20">
+				<title>段落终点</title>
+				<caption>段落终点</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="lenght" dbName="dlcd" type="3" len="18">
+				<title>段落长度</title>
+				<caption>段落长度</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="program" dbName="xlcs" type="1" len="10">
+				<title>线路程式（录入）</title>
+				<caption>线路程式</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="level" dbName="xjjb" type="1" len="4">
+				<title>巡检级别（1到4级）</title>
+				<caption>巡检级别</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="operator" dbName="lry" type="1" len="24">
+				<title>维护人员/单位编码</title>
+				<caption>护人员/单位编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="datetime" dbName="xgsj" type="93" len="19">
+				<title>修改时间</title>
+				<caption>修改时间</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+		</fields>
+		<ref/>
+	</model>
+</models>

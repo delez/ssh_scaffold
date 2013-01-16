@@ -1,0 +1,15 @@
+#if($model.Ref)
+alter table [$model.Name]
+ADD 
+#set($ref = $model.Ref)
+#set($size = $ref.ForeignFields.size())
+	FOREIGN KEY (#foreach($foreign in $ref.ForeignFields)
+$foreign#if($size != $velocityCount),#end#end)
+#set($size = $ref.PrimaryFields.size())
+	REFERENCES ${ref.PrimaryTable}(#foreach($primary in $ref.PrimaryFields)
+$primary#if($size != $velocityCount),#end#end)
+	##[ ON DELETE { CASCADE | NO ACTION } ] 
+	##[ ON UPDATE { CASCADE | NO ACTION } ] 
+	##[ NOT FOR REPLICATION ] 
+#end
+

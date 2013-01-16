@@ -1,0 +1,9 @@
+--
+--
+--
+#parse("mssql_drop.vm")
+go
+#parse("mssql_create.vm")
+go
+#parse("mssql_alter.vm")
+go

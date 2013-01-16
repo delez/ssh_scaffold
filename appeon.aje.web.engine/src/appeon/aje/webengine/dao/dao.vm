@@ -1,0 +1,26 @@
+/**
+ * this is engine from $model
+ * Copyright 2007-2010,2007 The Appeon inc..
+ */
+#set($kit = $sapper.toolkit)
+package  ${context.getPackage("dao")};
+
+import java.util.List;
+
+import org.springframework.dao.DataAccessException;
+import ${context.getPackage("domain")}.$model.Name;
+
+public interface ${model.Name}Dao {
+
+#set($keys = $model.PrimaryKeys)
+	#if($keys)
+${model.Name} select${model.Name}($kit.getParameters($keys)) throws DataAccessException;
+#end
+  List selectAll${model.Name}() throws DataAccessException;
+  #set($p = $kit.toLowerCase(${model.Name}))
+  void insert${model.Name}(${model.Name} $p) throws DataAccessException;
+
+  void update${model.Name}(${model.Name} $p) throws DataAccessException;
+
+  void delete${model.Name} (${model.Name} $p) throws DataAccessException;
+}

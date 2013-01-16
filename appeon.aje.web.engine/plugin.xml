@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         id="WebEngine"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="appeon.aje.web.engine.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="WebEngine Perspective"
+            class="appeon.aje.web.engine.Perspective"
+            id="appeon.aje.web.engine.perspective">
+      </perspective>
+   </extension>
+
+</plugin>

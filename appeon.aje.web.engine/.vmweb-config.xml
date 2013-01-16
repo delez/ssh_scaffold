@@ -1,0 +1,25 @@
+<config>
+	<context-values>
+		<resource path="src/appeon/aje/webengine/page/jsp_show.vm">
+			<value key="model" object-class="appeon.aje.webengine.prototype.Model"/>
+			<value key="field" object-class="appeon.aje.webengine.prototype.Field"/>
+		</resource>
+		<resource path="src/appeon/aje/webengine/db/map.vm">
+			<value key="field" object-class="appeon.aje.webengine.prototype.Field"/>
+		</resource>
+		<resource path="src/appeon/aje/webengine/page/jsp_form.vm">
+			<value key="field" object-class="appeon.aje.webengine.prototype.Field"/>
+			<value key="model" object-class="appeon.aje.webengine.prototype.Model"/>
+		</resource>
+		<resource path="src/appeon/aje/webengine/db/mssql.vm">
+			<value key="field" object-class="appeon.aje.webengine.prototype.Field"/>
+			<value key="model" object-class="appeon.aje.webengine.prototype.Model"/>
+			<value key="ref" object-class="appeon.aje.webengine.prototype.Reference"/>
+		</resource>
+		<resource path="src/appeon/aje/webengine/page/jsp_list.vm">
+			<value key="field" object-class="appeon.aje.webengine.prototype.Field"/>
+			<value key="model" object-class="appeon.aje.webengine.prototype.Model"/>
+			<value key="context" object-class="appeon.aje.webengine.prototype.Context"/>
+		</resource>
+	</context-values>
+</config>

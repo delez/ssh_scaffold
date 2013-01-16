@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="$model.Name">
+
+  <typeAlias alias="$model.Name" type="${context.getPackage('domain')}.$model.Name"/>
+			  <typeAlias alias="Map" type="java.util.Map" />
+  
+  <cacheModel id="oneHours${model.Name}" type="MEMORY">
+    <flushInterval hours="1"/>
+    <property name="reference-type" value="WEAK"/>
+  </cacheModel>
+
+  <resultMap id="result" class="$model.Name">
+#foreach($field in $model.Fields)
+    <result property="$field.Name" column="$field.DbName" columnIndex="$velocityCount"/>
+#end
+	  </resultMap>
+
+  <select id="selectAll${model.Name}" resultMap="result">
+    select *
+    from ${model.DbName} 
+  </select>
+  #set($fields = $model.Fields)
+  #set($len = $model.Fields.size())
+  #set($keys = $model.PrimaryKeys)
+  #set($keylen = $keys.size())
+  <select id="select${model.Name}" resultClass="$model.Name"  parameterClass="string">
+    select #foreach($field in $fields) $field.DbName as $field.Name#if($len > $velocityCount),#end #end 
+    from ${model.DbName} 
+    where #foreach($key in $keys) $key.DbName = #$key.name# #if($keylen > $velocityCount)and#end #end 
+  </select>
+  <insert id="insert${model.Name}" parameterClass="$model.Name">
+    insert into ${model.DbName} (#foreach($field in $fields) $field.DbName #if($len > $velocityCount),#end #end) 
+    values (#foreach($field in $fields) #$field.Name# #if($len > $velocityCount),#end #end)
+  </insert>
+
+  <update id="update${model.Name}" parameterClass="$model.Name">
+    update ${model.DbName} set #foreach($field in $fields) $field.DbName = #$field.Name# #if($len > $velocityCount),#end #end  
+    where #foreach($key in $keys) $key.DbName = #$key.name# #if($keylen > $velocityCount)and #end #end 
+  </update>
+
+  <delete id="delete${model.Name}" parameterClass="$model.Name">
+    delete from ${model.DbName} where #foreach($key in $keys) $key.DbName = #$key.name# #if($keylen > $velocityCount)and #end #end
+  </delete>
+
+  
+</sqlMap>

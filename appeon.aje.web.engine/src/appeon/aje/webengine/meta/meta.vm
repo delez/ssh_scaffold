@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<models>
+#foreach($model in $models)
+		<model name="$model.Name" #if($model.Type)type="$model.Type"#end  #if($model.dbName)dbName="$model.DbName"#end>
+		<description>$model.Description</description>
+		<fields>
+			#foreach($field in $model.Fields)
+		<field name="$field.Name" type="$field.Type" len="$field.Len">
+				<precision>$field.Precision</precision>
+				<scale>$field.Scale</scale>
+				<key>$field.Key</key>
+				<identity>$field.Identity</identity>
+				<isnull>$field.Null</isnull>
+				<password>$field.Password</password>
+				<initial>#if($field.Initial)$field.Initial#end</initial>
+				<values>#if($field.Values)$field.Values#end</values>
+			<title>#if($field.Title)$field.Title#end</title>
+				<caption>#if($field.Caption)$field.Caption#end</caption>
+				</field>
+			#end
+		</fields>
+	<ref>#if($model.Ref)$model.Ref#end</ref>
+	</model>
+	#end
+	</models>

@@ -1,0 +1,49 @@
+/**
+ * this is engine from $model
+ * Copyright 2007-2010,2007 The Appeon inc..
+ */
+#set($kit = $sapper.toolkit)
+package  ${context.getPackage("dao.ibatis")};
+
+import java.util.List;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import ${context.getPackage("dao")}.${model.Name}Dao;
+import ${context.getPackage("domain")}.${model.Name};
+
+public class SqlMap${model.Name}Dao extends SqlMapClientDaoSupport implements ${model.Name}Dao {
+		#set($keys = $model.PrimaryKeys)
+	#if($keys)
+public ${model.Name} select${model.Name}($kit.getParameters($keys)) throws DataAccessException{
+		    #if($keys.size() > 1)
+		      Map map = new HashMap();
+		      #foreach($key in $keys)map.put("$key.Name", $key.Name);#end
+		      parameter = map;
+				      return (${model.Name}) getSqlMapClientTemplate().queryForObject("select${model.Name}", username);
+				    #elseif($keys.size() == 1)
+				      return (${model.Name}) getSqlMapClientTemplate().queryForObject("select${model.Name}", ${kit.toLowerCase(${keys.get(0).getName()})});
+				    #else
+				      return null;
+				    #end
+
+
+}
+#end
+public List selectAll${model.Name}() throws DataAccessException{
+    return getSqlMapClientTemplate().queryForList("selectAll${model.Name}", null);
+	  }
+	  #set($p = $kit.toLowerCase(${model.Name}))
+public  void insert${model.Name}(${model.Name} $p) throws DataAccessException{
+    getSqlMapClientTemplate().insert("insert${model.Name}", $p);
+  }
+
+public void update${model.Name}(${model.Name} $p) throws DataAccessException{
+    getSqlMapClientTemplate().update("update${model.Name}", $p);
+  }
+
+public void delete${model.Name} (${model.Name} $p) throws DataAccessException{
+    getSqlMapClientTemplate().delete("delete${model.Name}", $p);
+  }
+  
+		}

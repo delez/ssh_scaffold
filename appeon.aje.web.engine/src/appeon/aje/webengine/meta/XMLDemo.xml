@@ -1,0 +1,18 @@
+<models>
+	<medel name="demo" type="example">
+	<description/>
+		<Fields>
+			<field name="key" type="0" len="">
+				<titleName></titleName>
+				<precision></precision>
+				<scale></scale>
+				<key>true</key>
+				<identity>true</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial></initial>
+				<values />
+			</field>
+		</Fields>
+	</medel>
+</models>

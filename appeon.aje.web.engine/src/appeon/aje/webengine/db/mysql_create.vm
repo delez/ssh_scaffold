@@ -1,0 +1,10 @@
+#set($fields = $model.Fields)
+#set($size = $fields.size())
+
+create table $model.Name(
+#foreach($field in $fields)
+	#set($type = $sapper.sqlMap.getType($field))
+	$field.Name $type#if(!$field.isNull()) NOT NULL#end #if($field.isIdentity())IDENTITY#end#if($field.isKey())PRIMARY KEY#end#if($velocityCount != $size),#end
+	
+#end
+);

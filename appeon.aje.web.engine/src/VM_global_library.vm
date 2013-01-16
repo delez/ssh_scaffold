@@ -1,0 +1,13 @@
+#macro( getType $type)
+#set($type = $kit.getShortType($kit.getType($field.Type)))
+#end
+#macro(outLen $len)
+#if($len > 1)($len)#end
+
+#end
+#macro(outPrecision $precision $scale)
+#if($precision > 0)($precision #if($scale > 0),$scale#end)#end
+
+#end
+
+

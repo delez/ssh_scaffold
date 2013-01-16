@@ -1,0 +1,8 @@
+  #set($fields = $model.Fields)
+  #set($len = $model.Fields.size())
+Map params = new HashMap();
+params.put("key", );
+
+ #foreach($field in $fields) 
+ params.put("${field.Name}", ${model.VariableName}.get${field.TitleName}()); 
+ #end  

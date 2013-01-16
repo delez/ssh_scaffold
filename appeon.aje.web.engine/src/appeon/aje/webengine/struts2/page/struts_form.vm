@@ -1,0 +1,37 @@
+#set($fname = $field.Name)
+#set($len = $field.Len)
+#set($valueList =$field.Values) 
+#if($valueList && $valueList.size() > 0)
+#set($size = $valueList.size())
+#if($size > 3)
+<select  id="${name}_${fname}"  name="${name}.${fname}">
+#foreach($value in $field.Values)
+<option>$value</option>
+#end
+</select>
+#else
+<s:if  test="${name}.${fname}">
+#foreach($value in $valueList)
+<input type="radio"  id="${name}_${fname}_${value}"  name="${name}.${fname}" value="$fname"/>$value
+#end
+</s:if><s:else>
+...
+</s:else>
+#end
+#elseif($field.Type == -7)
+<c:choose>
+<c:when  test="${${name}.${fname}}"><input type="checkbox"  id="${name}_${fname}"  name="v" value="$fname"  checked/><c:when>
+<c:otherwise><input type="checkbox"  id="${name}_${fname}" name="${name}.${fname}" value="$fname"/></c:otherwise>
+</c:choose>
+#elseif($field.Type == 16)
+<input type="checkbox"  id="${name}_${fname}" name="${name}.${fname}" value="<s:property value='${name}.${fname}'/>"/>
+#elseif(${field.isPassword()})
+<input type="password"  id="${name}_${fname}"  name="${name}.${fname}" value="<s:property value='${name}.${fname}'/>"/>
+#else
+#if($field.Len > 128)
+<textarea  id="${name}_${fname}"  name="${name}.${fname}" rows="6" cols="64"><s:property value='${name}.${fname}'/></textarea>
+#else
+<input type="text" id="${name}_${fname}" name="${name}.${fname}" value="<s:property value='${name}.${fname}'/>" maxlength="$len"/>
+#end
+#end
+#set($valueList = 0) 

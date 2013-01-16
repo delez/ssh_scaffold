@@ -1,0 +1,80 @@
+<models xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="meta.xsd">
+<model name="PlanDetail" dbName="t_jhbs">
+	<description>计划明细</description>
+	<fields>
+		<field name="id" dbName="zjhbh" type="4" len="11">
+			<title>主计划编码</title>
+			<caption>主计划编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="planId" dbName="jhbh" type="4" len="11">
+			<title>计划编码</title>
+			<caption>计划编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="code" dbName="zhbh" type="1" len="23">
+			<title>组合编码</title>
+			<caption>组合编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="importDate" dbName="dqrq" type="93" len="19">
+			<title>读取时间</title>
+			<caption>读取时间</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>true</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="state" dbName="zt" type="1" len="4">
+			<title>状态</title>
+			<caption>状态</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="datetime" dbName="xgsj" type="93" len="19">
+			<title>修改时间</title>
+			<caption>修改时间</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+	</fields>
+	<ref/>
+</model>
+</models>

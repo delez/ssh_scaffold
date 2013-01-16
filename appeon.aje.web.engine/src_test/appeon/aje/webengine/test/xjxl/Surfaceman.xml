@@ -1,0 +1,130 @@
+<models>
+	<model name="Surfaceman" dbName="t_whyzl">
+		<description>维护员资料</description>
+		<fields>
+			<field name="code" dbName="zhbh" type="1" len="24">
+				<title>组合编码</title>
+				<caption>组合编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>true</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="id" dbName="whybh" type="1" len="8">
+				<title>维护员编码</title>
+				<caption>维护员编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="workunit" dbName="dwid" type="1" len="16">
+				<title>单位ID</title>
+				<caption>单位ID</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="telephone" dbName="whydh" type="1" len="20">
+				<title>维护员电话</title>
+				<caption>维护员电话</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="name" dbName="whyxm" type="1" len="30">
+				<title>维护员姓名</title>
+				<caption>维护员姓名</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="position" dbName="whyzb" type="1" len="6">
+				<title>职位</title>
+				<caption>职位</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="dispatchDate" dbName="wpfrq" type="93"
+				len="19">
+				<title>配发日期</title>
+				<caption>配发日期</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="stickSerialNumber" dbName="xjbbh" type="1"
+				len="10">
+				<title>巡检棒序号</title>
+				<caption>巡检棒序号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="operator" dbName="lry" type="1" len="24">
+				<title>修改人员</title>
+				<caption>修改人员</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="datetime" dbName="xgsj" type="93" len="19">
+				<title>修改时间</title>
+				<caption>修改时间</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+		</fields>
+		<ref />
+	</model>
+</models>

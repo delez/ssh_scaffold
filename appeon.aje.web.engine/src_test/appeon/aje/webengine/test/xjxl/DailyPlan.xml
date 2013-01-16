@@ -1,0 +1,152 @@
+<models>
+	<model name="DailyPlan" dbName="t_rcjh">
+		<description>日常计划</description>
+		<fields>
+			<field name="id" dbName="jhbh" type="4" len="11">
+				<title>计划编码</title>
+				<caption>计划编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>true</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="startDate" dbName="qsrq" type="93" len="19">
+				<title>起始日期</title>
+				<caption>起始日期</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="endDate" dbName="zzrq" type="93" len="19">
+				<title>终止日期</title>
+				<caption>终止日期</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="willInspect" dbName="yjbs" type="4" len="11">
+				<title>应检标石</title>
+				<caption>应检标石</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="inspected" dbName="sjbs" type="4" len="11">
+				<title>实检标石</title>
+				<caption>实检标石</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="pause" dbName="ztbs" type="4" len="11">
+				<title>暂停标石</title>
+				<caption>暂停标石</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="state" dbName="jhzt" type="1" len="8">
+				<title>计划状态</title>
+				<caption>计划状态</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="cycle" dbName="jhzq" type="1" len="5">
+				<title>计划周期</title>
+				<caption>计划周期</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="surfaceman" dbName="whybh" type="1" len="24">
+				<title>编码员名称</title>
+				<caption>编码员名称</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="remark" dbName="bzxx" type="1" len="50">
+				<title>备注</title>
+				<caption>备注</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="operator" dbName="czy" type="1" len="24">
+				<title>操作员</title>
+				<caption>操作员</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="datetime" dbName="xgsj" type="93" len="19">
+				<title>修改时间</title>
+				<caption>修改时间</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+		</fields>
+		<ref />
+	</model>
+</models>

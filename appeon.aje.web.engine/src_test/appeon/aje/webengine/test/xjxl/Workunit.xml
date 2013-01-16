@@ -1,0 +1,140 @@
+<models>
+	<model name="Workunit" dbName="t_dwzl">
+		<description>单位资料</description>
+		<fields>
+			<field name="code" dbName="dwid" type="1" len="16">
+				<title>单位ID</title>
+				<caption>单位ID</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>true</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="id" dbName="dwbm" type="1" len="10">
+				<title>单位编码</title>
+				<caption>单位编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="name" dbName="dwmc" type="1" len="20">
+				<title>单位名称</title>
+				<caption>单位名称</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="fullName"  dbName="dwqc" type="1" len="60">
+				<title>单位全称</title>
+				<caption>单位全称</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="property" dbName="dwsx" type="1" len="10">
+				<title>单位属性</title>
+				<caption>单位属性</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values>管辖, 代维</values>
+			</field>
+			<field name="principal"  dbName="fzr" type="1" len="30">
+				<title>负责人</title>
+				<caption>负责人</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="contact" dbName="lxr" type="1" len="30">
+				<title>联系人</title>
+				<caption>联系人</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="contractPeriod" dbName="htqx" type="93" len="19">
+				<title>合同期限（单位属性为管辖可以录入）</title>
+				<caption>合同期限（单位属性为管辖可以录入）</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="remark" dbName="bz" type="1" len="20">
+				<title>备注</title>
+				<caption>备注</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="operator" dbName="lry" type="1" len="24">
+				<title>录入员</title>
+				<caption>录入员</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="datetime" dbName="xgsj" type="93" len="19">
+				<title>修改时间</title>
+				<caption>修改时间</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+		</fields>
+		<ref/>
+	</model>
+</models>

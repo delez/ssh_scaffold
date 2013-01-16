@@ -1,0 +1,8 @@
+<c:choose>
+	  <c:when test="${status.index mod 2 == 0}">		
+	  	<tr  class='row_odd'>
+	  </c:when>
+	  <c:otherwise>
+	  	<tr class='row_normal'>
+	  </c:otherwise>
+</c:choose>

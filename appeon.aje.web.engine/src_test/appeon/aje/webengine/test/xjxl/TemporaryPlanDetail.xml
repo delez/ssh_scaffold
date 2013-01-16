@@ -1,0 +1,80 @@
+<models>
+<model name="TemporaryPlanDetail" dbName="t_lsjhbs">
+	<description>临时计划明细（标石）</description>
+	<fields>
+		<field name="id" dbName="jhbh" type="4" len="11">
+			<title>计划编码</title>
+			<caption>计划编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="code" dbName="zhbh" type="1" len="23">
+			<title>组合编码</title>
+			<caption>组合编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="startDate" dbName="qsrq" type="93" len="19">
+			<title>起始日期</title>
+			<caption>起始日期</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="endDate" dbName="zzrq" type="93" len="19">
+			<title>结束日期</title>
+			<caption>结束日期</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="importDate" dbName="dqrq" type="93" len="19">
+			<title>读取时间</title>
+			<caption>读取时间</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>true</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="datetime" dbName="xgsj" type="93" len="19">
+			<title>修改时间</title>
+			<caption>修改时间</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+	</fields>
+	<ref/>
+</model>
+</models>

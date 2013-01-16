@@ -1,0 +1,49 @@
+/**
+ * this is engine from $model
+ * Copyright 2007-2010,2007 The Appeon inc..
+ */
+#set($kit = $sapper.toolkit)
+
+package  $context.getPackage("web.form");
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts.action.ActionMapping;
+
+import ${context.getPackage("domain")}.${model.Name};
+
+/**
+ *
+ */
+public class  ${model.Name}Form extends BaseActionForm{
+  #set($field = $kit.toLowerCase(${model.Name}))
+	  private final ${model.Name} $field;
+		  private final boolean new${model.Name};
+	
+	  public ${model.Name}Form(){
+	    $field = new ${model.Name}();
+	    new${model.Name} = true;
+	  }
+	  
+	  public ${model.Name}Form(${model.Name} value){
+	    this.$field = value;
+	    new${model.Name} = false;
+	  }
+	  
+	  	public ${model.Name} get${model.Name}() {
+		    return $field ;
+	  }
+	  
+	  	public boolean isNew${model.Name}() {
+		    return new${model.Name};
+	  }
+	  
+	  
+    public ActionErrors validate(ActionMapping mapping,
+                                 HttpServletRequest request) {
+
+        return (null);
+
+    }
+
+}

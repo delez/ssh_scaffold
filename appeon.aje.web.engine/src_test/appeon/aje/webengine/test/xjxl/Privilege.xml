@@ -1,0 +1,116 @@
+<models>
+	<model name="Privilege" dbName="t_yhqxb">
+		<description>权限</description>
+		<fields>
+			<field name="userId" dbName="yhbh" type="1" len="16">
+				<title>用户编号</title>
+				<caption>用户编号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="moduleId" dbName="mkcdbh" type="1" len="6">
+				<title>模块**编号</title>
+				<caption>模块**编号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="moduleName" dbName="mkmc" type="1" len="20">
+				<title>模块名称</title>
+				<caption>模块名称</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="module" dbName="mkgnms" type="1" len="64">
+				<title>模块****</title>
+				<caption>模块****</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="module" dbName="mkcdmc" type="1" len="10">
+				<title>模块**名称</title>
+				<caption>模块**名称</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="visible" dbName="sfkj" type="4" len="11">
+				<title>是否可见</title>
+				<caption>是否可见</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="insert" dbName="crqx" type="4" len="11">
+				<title>添加</title>
+				<caption>添加</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="modify" dbName="xgqx" type="4" len="11">
+				<title>修改</title>
+				<caption>修改</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+			<field name="delete" dbName="scqx" type="4" len="11">
+				<title>删除</title>
+				<caption>删除</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial />
+				<values />
+			</field>
+		</fields>
+		<ref />
+	</model>
+</models>

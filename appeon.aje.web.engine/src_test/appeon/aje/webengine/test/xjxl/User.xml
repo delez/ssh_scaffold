@@ -1,0 +1,152 @@
+<models>
+<model name="User" dbName="t_yhb">
+		<description>用户表</description>
+		<fields>
+			<field name="id" dbName="yhbm" type="1" len="16">
+				<title>用户编码</title>
+				<caption>用户编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="workunit" dbName="dwbm" type="1" len="16">
+				<title>单位编码</title>
+				<caption>单位编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="password" dbName="yhmm" type="1" len="16">
+				<title>用户密码</title>
+				<caption>用户密码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="level" dbName="yhjb" type="1" len="8">
+				<title>用户级别（系统用户＋普通用户＋）</title>
+				<caption>用户级别</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="registDate" dbName="zcrq" type="93" len="19">
+				<title>注册日期</title>
+				<caption>注册日期</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="validate" dbName="yxrq" type="93" len="19">
+				<title>有效日期</title>
+				<caption>有效日期</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="name" dbName="yhxm" type="1" len="30">
+				<title>用户姓名</title>
+				<caption>用户姓名</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="telephone" dbName="lxdh" type="1" len="16">
+				<title>联系电话</title>
+				<caption>联系电话</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="jobTitle" dbName="yhzb" type="1" len="16">
+				<title>用户职别</title>
+				<caption>用户职别</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="remark" dbName="bz" type="1" len="30">
+				<title>备注</title>
+				<caption>备注</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="privilege" dbName="qx" type="1" len="16">
+				<title>权限（按位模块）</title>
+				<caption>权限</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="datetime" dbName="xgsj" type="93" len="19">
+				<title>修改时间</title>
+				<caption>修改时间</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+		</fields>
+		<ref/>
+	</model>
+</models>

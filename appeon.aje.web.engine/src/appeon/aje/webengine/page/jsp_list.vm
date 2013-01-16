@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>insert list  page title</title>
+</head>
+<body>
+<!--this is jsp grid template
+ please include jstl taglib in your page-->
+ <h1>${name} 列表页面</h1>
+ #set($name = $model.VariableName)
+<div style="width:100%">
+<table class="streamlined" border="1" cellspacing="0" cellpadding="0">
+  <thead>
+	<tr>
+	#foreach($field in $model.Fields)
+	    <th scope="col" class="sortSelector"  nowrap>$field.Title</th>
+	#end
+    <th width="100"  nowrap="nowrap">&nbsp;</th>
+	</tr>
+  </thead>
+  <tbody>
+	<c:forEach var="${name}" items="${${name}s}" varStatus="status">
+				<tr class="row_css">
+		#foreach($field in $model.Fields)
+    <td  nowrap="nowrap"><c:out value="${${name}.${field.Name}}"/>&nbsp;</td>
+	#end
+    <td  nowrap="nowrap"><a href="${model.Name}.do?search=keys">Show</a>&nbsp;<a href="${model.Name}.do?search=keys">Edit</a>&nbsp;<a href="${model.Name}.do?search=keys">Delete</a></td>
+  </tr>
+  	</c:forEach>
+  </tbody>
+</table>
+</div>
+</body>
+</html>

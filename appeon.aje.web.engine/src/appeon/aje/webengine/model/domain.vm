@@ -1,0 +1,45 @@
+/**
+ * this is engine from $model
+ * Copyright 2007-2010,2007 The Appeon inc..
+ */
+#set($kit = $sapper.toolkit)
+
+package  ${context.getPackage("domain")};
+
+##import
+#foreach($classpath in $kit.getClassPaths($model))
+import $classpath;
+#end
+
+/**
+ *
+ */
+public class $model.Name{
+	##field declare
+	#foreach($field in $model.Fields)
+		#set($type = $kit.getShortType($kit.getType($field.Type)))
+		private $type $field.Name;
+	#end
+	//get/set method
+	#foreach($field in $model.Fields)
+		#set($name = $field.Name)
+		#set($titleName = $field.TitleName)
+		#set($type = $kit.getShortType($kit.getType($field.Type)))
+		/**
+		*get $name 
+		*/
+		public  void set$titleName($type $name){
+			this.$name = $name;
+		}
+		/**
+		*set $name
+		*/
+		#if($type == "boolean")
+			public  $type is$titleName(){
+		#else
+			public  $type get$titleName(){
+		#end
+		return this.$name;
+		}
+	#end
+}

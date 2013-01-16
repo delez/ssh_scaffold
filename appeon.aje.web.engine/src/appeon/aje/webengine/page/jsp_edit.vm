@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>insert edit page title</title>
+</head>
+<body>
+#set($name = $model.VariableName)
+<h1>${name} 修改页面</h1>
+<form id="content" action="${name}_update.do?action=edit"  method="post">
+  <table class="form">
+#foreach($field in $model.Fields)
+<tr>
+  <td class="label_cell"><span class="label">${field.Caption}:</span></td><td class="value_cell">#parse("appeon/aje/webengine/page/jsp_form.vm")</td>
+</tr>
+#end
+</table>
+
+<input type="reset"/>
+<input type="submit"/>
+</form>
+</body>
+</html>

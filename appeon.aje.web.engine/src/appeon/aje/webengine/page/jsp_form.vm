@@ -1,0 +1,36 @@
+#set($fname = $field.Name)
+#set($len = $field.Len)
+#set($valueList =$field.Values) 
+#if($valueList && $valueList.size() > 0)
+#set($size = $valueList.size())
+#if($size > 3)
+<select name="$fname">
+#foreach($value in $field.Values)
+<option>$value</option>
+#end
+</select>
+#else
+#foreach($value in $valueList)
+<c:choose>
+<c:when  test="${${name}.${fname}}"><input type="radio" name="$fname" value="$fname"   checked="checked"/>$value</c:when>
+<c:otherwise><input type="radio" name="$fname" value="$fname"/>$value</c:otherwise>
+</c:choose>
+#end
+#end
+#elseif($field.Type == -7)
+<c:choose>
+<c:when  test="${${name}.${fname}}"><input type="checkbox" name="$fname" value="$fname"  checked/><c:when>
+<c:otherwise><input type="checkbox" name="$fname" value="$$fname"/></c:otherwise>
+</c:choose>
+#elseif($field.Type == 16)
+<input type="checkbox" name="$fname" value="<c:out value='${${name}.${fname}}'/>"/>
+#elseif(${field.isPassword()})
+<input type="password"  name="$fname" value="<c:out value='${${name}.${fname}}'/>"/>
+#else
+#if($field.Len > 128)
+<textarea name="$fname" rows="6" cols="64"><c:out value='${${name}.${fname}}'/></textarea>
+#else
+<input type="text" name="$fname" value="<c:out value='${${name}.${fname}}'/>" maxlength="$len"/>
+#end
+#end
+#set($valueList = 0) 

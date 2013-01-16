@@ -1,0 +1,128 @@
+<models xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="meta.xsd">
+	<model name="Point" dbName="T_bszl">
+		<description>标石资料（用户登录时是自己的录入的或自己维护范围可以查看）</description>
+		<fields>
+			<field name="id" dbName="bsbh" type="1" len="10">
+				<title>标石编号</title>
+				<caption>标石编号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="serialNumber" dbName="nkxh" type="1" len="12">
+				<title>钮扣序号</title>
+				<caption>钮扣序号</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="address" dbName="msdz" type="1" len="60">
+				<title>埋设地址</title>
+				<caption>埋设地址</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="longitude " dbName="jd" type="1" len="9">
+				<title>经度</title>
+				<caption>经度</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="latitude " dbName="wd" type="1" len="9">
+				<title>纬度</title>
+				<caption>纬度</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="pictureId" dbName="tpbh" type="4" len="11">
+				<title>图片编码</title>
+				<caption>图片编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="code" dbName="zhbh" type="1" len="23">
+				<title>组合编码</title>
+				<caption>组合编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>true</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="sectionCode" dbName="dlbh" type="1" len="13">
+				<title>段落编码</title>
+				<caption>段落编码</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>false</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="operator" dbName="lry" type="1" len="24">
+				<title>维护人员</title>
+				<caption>维护人员</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+			<field name="datetime" dbName="xgsj" type="93" len="19">
+				<title>修改时间</title>
+				<caption>修改时间</caption>
+				<precision>0</precision>
+				<scale>0</scale>
+				<key>false</key>
+				<identity>false</identity>
+				<isnull>true</isnull>
+				<password>false</password>
+				<initial/>
+				<values/>
+			</field>
+		</fields>
+		<ref/>
+	</model>
+</models>

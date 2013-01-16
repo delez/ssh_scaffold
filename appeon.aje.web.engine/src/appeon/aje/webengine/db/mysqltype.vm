@@ -1,0 +1,54 @@
+#set($len = $field.Len)
+#set($p = $field.Precision)
+#set($s = $field.Scale)
+
+BIT=bit
+TINYINT=tinyint
+SMALLINT=smallint
+INTEGER=int
+BIGINT=bigint
+FLOAT=float#outLen($len)
+REAL=real
+DOUBLE=real
+NUMERIC=numeric#outPrecision($p $s)
+DECIMAL=decimal#outPrecision($p $s)
+CHAR=char#outLen($len)
+VARCHAR=varchar#outLen($len)
+LONGVARCHAR=text
+DATE=datetime
+TIME=datetime
+TIMESTAMP=timestamp
+BINARY=binary#outLen($len)
+VARBINARY=varbinary#outLen($len)
+LONGVARBINARY=binary#outLen($len)
+NULL=null
+OTHER=BLOB
+JAVA_OBJECT=BLOB
+DISTINCT=BLOB
+STRUCT=BLOB
+ARRAY=BLOB
+BLOB=BLOB#outLen($len)
+CLOB=BLOB#outLen($len)
+REF=BLOB
+DATALINK=BLOB
+BOOLEAN=bit
+
+#*sql 92
+Binary varying
+char varying
+character
+character
+character(n)
+character varying(n)
+Dec
+Double precision
+float[(n)] for n = 1-7
+float[(n)] for n = 8-15
+integer
+national character(n)
+national char(n)
+national character varying(n)
+national char varying(n)
+national text
+rowversion
+*#

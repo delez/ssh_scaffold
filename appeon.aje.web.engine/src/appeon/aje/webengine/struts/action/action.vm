@@ -1,0 +1,39 @@
+
+package  ${context.getPackage("actions")};
+
+
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+public class SuccessAction extends Action {
+
+    public static String SUCCESS = "success";
+    public static String FAILURE = "failure";
+
+    /**
+     * Dispatch control to the "success" forward.
+     */
+    public ActionForward execute(
+            ActionMapping mapping,
+            ActionForm form,
+            HttpServletRequest request,
+            HttpServletResponse response)
+            throws Exception {
+        if(request.
+
+        return mapping.findForward(SUCCESS);
+    }
+    protected ActionForward doNew(){
+    }
+    protected ActionForward doList(){
+    }
+    protected ActionForward doRemove(){
+    }
+    protected ActionForward doView(){
+    }
+}

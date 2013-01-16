@@ -1,0 +1,4 @@
+生成Dao类：用于DataAccess接口
+生成action类：用于提交数据的处理
+生成form类：用于页面显示
+生成control配置：主要是修改struts.config（XML）

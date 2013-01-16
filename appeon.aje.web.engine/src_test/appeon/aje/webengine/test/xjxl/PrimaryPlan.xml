@@ -1,0 +1,80 @@
+<models>
+<model name="PrimaryPlan" dbName="T_zjh">
+	<description>主计划</description>
+	<fields>
+		<field name="id" dbName="zjhbh" type="4" len="11">
+			<title>编码</title>
+			<caption>编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>true</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="planId" dbName="jhbh" type="4" len="11">
+			<title>计划编码</title>
+			<caption>计划编码</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="startDate" dbName="qsrq" type="93" len="19">
+			<title>开始日期</title>
+			<caption>开始日期</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="endDate" dbName="zzrq" type="93" len="19">
+			<title>终止日期</title>
+			<caption>终止日期</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="content" dbName="jhnr" type="1" len="20">
+			<title>内容</title>
+			<caption>内容</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+		<field name="datetime" dbName="xgsj" type="93" len="19">
+			<title>修改时间</title>
+			<caption>修改时间</caption>
+			<precision>0</precision>
+			<scale>0</scale>
+			<key>false</key>
+			<identity>false</identity>
+			<isnull>false</isnull>
+			<password>false</password>
+			<initial/>
+			<values/>
+		</field>
+	</fields>
+	<ref/>
+</model>
+</models>
